@@ -100,6 +100,13 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    // Force Vite (and any plugin that attempts to load sass-embedded) to use the pure JS Sass package.
+    // This avoids ENOENT failures in CI/container environments where the embedded Dart binary isn't present.
+    resolve: {
+      alias: {
+        'sass-embedded': 'sass',
+      },
+    },
     plugins: [
       nodePolyfills({
         include: ['buffer', 'process', 'util', 'stream', 'path'], // Exclude 'crypto' from polyfills
