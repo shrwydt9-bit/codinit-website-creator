@@ -36,5 +36,14 @@
     "**/.client/**/*.ts",
     "**/.client/**/*.tsx"
   ],
-  "exclude": ["node_modules", "templates/**/*"]
+  "exclude": [
+    "node_modules",
+    "templates/**/*",
+    "src/**/*",
+    "tailwind.config.ts",
+    "vitest.config.ts",
+    "vite.config.ts",
+    "vite-electron.config.ts",
+    "eslint.config.*"
+  ]
 }
