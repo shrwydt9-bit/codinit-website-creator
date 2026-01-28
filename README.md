@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+<p align="center">
+  <img
+    width="1270"
+    height="630"
+    alt="CodinIT.dev Hero"
+    src="https://github.com/user-attachments/assets/7d522f08-bbab-47ee-a47f-0b9c92445cdc"
+  />
+</p>
 
-## Project info
+<p align="center">
+  <a href="https://fazier.com/launches/codinit" target="_blank">
+    <img
+      src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=6267&badge_type=weekly&theme=light"
+      width="270"
+      alt="Fazier badge"
+    />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;
+  <a
+    href="https://peerpush.net/p/build-your-next-app-with-ai"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="https://peerpush.net/p/build-your-next-app-with-ai/badge.png"
+      alt="CodinIT.dev badge"
+      width="230"
+    />
+  </a>
+</p>
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+<h1 align="center">CodinIT.dev — Open‑Source AI App Builder</h1>
 
-## How can I edit this code?
+<p align="center">
+  Build, manage, and deploy intelligent applications faster — directly from your browser or desktop.
+</p>
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+CodinIT.dev is an open‑source, AI full‑stack development platform designed to help developers build modern Node.js applications with speed and precision. It combines code generation, project management, and deployment tools into a single workflow, powered by your choice of AI providers.
 
-Changes made via Lovable will be committed automatically to this repo.
+Whether you are prototyping, scaling a SaaS product, or experimenting with local LLMs, CodinIT.dev adapts to your stack and workflow.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Quick Start
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Run as a Desktop App
 
-Follow these steps:
+Download the latest prebuilt release for macOS, Windows, and Linux.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+[Download Latest Release](https://github.com/codinit-dev/codinit-dev/releases/latest)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Get up and running in minutes.
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1. Clone the Repository
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone https://github.com/codinit-dev/codinit-dev.git
+cd codinit-dev
+
 ```
 
-**Edit a file directly in GitHub**
+### 2. Install Dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# npm
+npm install
 
-**Use GitHub Codespaces**
+# or pnpm
+pnpm install
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
 
-## What technologies are used for this project?
+### 3. Configure Environment
 
-This project is built with:
+Create a `.env` file and add your preferred AI provider keys. You can mix and match multiple providers depending on your requirements.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 4. Run the Development Server
 
-## How can I deploy this project?
+```bash
+pnpm run dev
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```
 
-## Can I connect a custom domain to my Lovable project?
+The application will be available at: http://localhost:5173
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Core Capabilities
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Automated Full-Stack Engineering:** Streamline the creation and management of complex Node.js architectures using intelligent generation.
+- **Universal Model Integration:** Seamlessly connect with over 19 cloud and local AI providers.
+- **Hybrid Environment Support:** native compatibility for both Web browsers and Desktop (Electron) environments.
+- **Production-Ready Containerization:** Fully Dockerized workflow with preset configurations for Vercel, Netlify, and GitHub Pages.
+- **Integrated Development Suite:** Includes robust utilities such as semantic search, diff visualization, and concurrency file-locking.
+- **Expanded Ecosystem Connectivity:** Native integration with Supabase, real-time data visualization tools, and voice-command interfaces.
+- **Vendor-Neutral Infrastructure:** A flexible architecture designed to prevent vendor lock-in, allowing dynamic switching between backend providers.
+
+---
+
+## Supported AI Providers
+
+CodinIT.dev allows you to use one provider or switch dynamically per task.
+
+### Cloud Providers
+
+OpenAI, Anthropic, Google, Groq, xAI, DeepSeek, Cohere, Mistral, Together, Perplexity, HuggingFace, OpenRouter, and more.
+
+### Local Providers
+
+Ollama, LM Studio, and OpenAI‑compatible local endpoints.
+
+---
+
+## Deployment & Desktop Usage
+
+### Run with Docker
+
+```bash
+npm run dockerbuild
+docker compose --profile development up
+
+```
+
+
