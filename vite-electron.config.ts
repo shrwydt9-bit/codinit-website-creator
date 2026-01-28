@@ -27,6 +27,8 @@ export default defineConfig((config) => {
     },
     resolve: {
       alias: {
+        // Force Sass to use the pure JS implementation even if sass-embedded is present.
+        'sass-embedded': 'sass',
         // Map crypto and crypto-browserify to node:crypto for SSR builds
         ...(config.isSsrBuild
           ? {
