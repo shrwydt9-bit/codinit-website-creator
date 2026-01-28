@@ -124,7 +124,9 @@ export default defineConfig((config) => {
         },
       },
       config.mode === 'development' && componentTagger(),
-      config.mode !== 'test' && remixCloudflareDevProxy(),
+      // Only run the Cloudflare dev proxy in dev-server mode.
+      // During `vite build`, spawning `workerd` is unnecessary and can fail in CI/container envs.
+      config.command === 'serve' && config.mode !== 'test' && remixCloudflareDevProxy(),
       remixVitePlugin({
         future: {
           v3_fetcherPersist: true,
