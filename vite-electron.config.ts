@@ -4,8 +4,8 @@ import UnoCSS from 'unocss/vite';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { optimizeCssModules } from 'vite-plugin-optimize-css-modules';
 import tsconfigPaths from 'vite-tsconfig-paths';
-
 import { execSync } from 'child_process';
+import * as sass from 'sass';
 
 // Get git hash with fallback
 const getGitHash = () => {
@@ -78,9 +78,9 @@ export default defineConfig((config) => {
     css: {
       preprocessorOptions: {
         scss: {
-          // Avoid sass-embedded binary requirements in CI/container builds.
-          // Use the JS implementation from `sass` instead.
-          api: 'legacy',
+          // CRITICAL: Force Vite to use the pure JS `sass` implementation.
+          // Without this, Vite will try to use `sass-embedded` (native binary) which fails in CI/container builds.
+          implementation: sass,
         },
       },
     },
