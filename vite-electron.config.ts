@@ -78,7 +78,9 @@ export default defineConfig((config) => {
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler',
+          // Avoid sass-embedded binary requirements in CI/container builds.
+          // Use the JS implementation from `sass` instead.
+          api: 'legacy',
         },
       },
     },

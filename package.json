@@ -168,6 +168,7 @@
     "remix-utils": "^7.7.0",
     "resend": "^6.2.2",
     "rollup-plugin-node-polyfills": "^0.2.1",
+    "sass": "^1.97.3",
     "shiki": "^1.29.2",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
