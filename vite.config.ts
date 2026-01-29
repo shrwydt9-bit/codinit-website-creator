@@ -161,6 +161,9 @@ export default defineConfig((config) => {
           // CRITICAL: Force Vite to use the pure JS `sass` implementation.
           // Without this, Vite will try to use `sass-embedded` (native binary) which fails in CI/container builds.
           implementation: sass,
+          // Force the legacy JS API to avoid triggering the embedded compiler path.
+          // NOTE: This is a temporary compatibility setting; we can revisit once CI/runtime supports embedded binaries.
+          api: 'legacy',
         },
       },
     },
